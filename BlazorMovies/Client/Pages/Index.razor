@@ -1,0 +1,37 @@
+﻿@page "/"
+<div>
+    <h3>Movie</h3>
+    <MoviesList Movies="movies">
+        <NullTemplate>
+            <span style="color: red">This page is definitely loading...</span>
+        </NullTemplate>
+        <EmptyTemplate>
+            <span style="color: blue">No record to see</span>
+        </EmptyTemplate>
+    </MoviesList>
+</div>
+
+@code{
+    private List<Movie> movies;
+    protected override void OnInitialized()
+    {
+        movies = new List<Movie>
+        {
+            new Movie{Title = "Spider-Man Far From Home", ReleaseDate = new DateTime(2019, 7, 2)},
+            new Movie{Title = "Moana", ReleaseDate = new DateTime(2011, 11, 23)},
+            new Movie{Title = "Hulk", ReleaseDate = new DateTime(2010, 7, 16)},
+            new Movie{Title = "Spawn", ReleaseDate = new DateTime(2010, 7, 16)},
+            new Movie{Title = "Terminator", ReleaseDate = new DateTime(2010, 7, 16)},
+            new Movie{Title = "Ghost Rider", ReleaseDate = new DateTime(2010, 7, 16)},
+            new Movie{Title = "Gladiator", ReleaseDate = new DateTime(2010, 7, 16)},
+            new Movie{Title = "Frosh", ReleaseDate = new DateTime(2010, 7, 16)},
+            new Movie{Title = "Omen", ReleaseDate = new DateTime(2010, 7, 16)},
+            new Movie{Title = "Damien", ReleaseDate = new DateTime(2010, 7, 16)},
+            new Movie{Title = "Vampires", ReleaseDate = new DateTime(2010, 7, 16)},
+            new Movie{Title = "Dracula", ReleaseDate = new DateTime(2010, 7, 16)},
+            new Movie{Title = "Jason", ReleaseDate = new DateTime(2010, 7, 16)},
+            new Movie{Title = "Dusk Till Dawn", ReleaseDate = new DateTime(2010, 7, 16)},
+            new Movie{Title = "Evil Dead", ReleaseDate = new DateTime(2010, 7, 16)},
+        };
+    }
+}

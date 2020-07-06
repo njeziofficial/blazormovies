@@ -1,0 +1,109 @@
+﻿<div>
+    @if (Movies == null)
+    {
+        @*<text>Please wait while this page is loading... </text>*@
+        @if (NullTemplate != null)
+        {
+            @NullTemplate
+        }
+        else
+        {
+            //if ChildContent is null
+            <text>Loading...</text>
+        }
+    }
+    else if (Movies.Count == 0)
+    {
+        @if (EmptyTemplate != null)
+        {
+            @EmptyTemplate
+        }
+        else
+        {
+            //Default
+            <text>There are currently no movies to display.</text>
+        }
+    }
+    else
+    {
+        <input type="checkbox" @bind="_displayButtons" />
+        @foreach (var movie in Movies)
+        {
+            <IndividualMovie Movie="movie" DisplayButtons="@_displayButtons" DeleteMovie="@DeleteMovie" />
+        }
+    }
+</div>
+
+@code {
+    [Parameter]
+    public List<Movie> Movies { get; set; }
+
+    [Parameter]
+    public RenderFragment NullTemplate { get; set; }
+    [Parameter]
+    public RenderFragment EmptyTemplate { get; set; }
+
+    bool _displayButtons = true;
+
+    void DeleteMovie(Movie movie)
+    {
+        Movies.Remove(movie);
+    }
+
+    protected override void OnInitialized()
+    {
+        Console.WriteLine("OnInitialized.Movies.Count = "+ Movies.Count.ToString());
+    }
+
+    protected override void OnParametersSet()
+    {
+        Console.WriteLine("OnParametersSet.Movies.Count = " + Movies.Count.ToString());
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        Console.WriteLine("OnAfterRender.FirstRender= "+ firstRender.ToString());
+    }
+
+    protected override bool ShouldRender()
+    {
+       return true;
+    }
+
+}
+
+
+
+
+
+
+@*<table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <th>s/n</th>
+        <th>Movie</th>
+        <th>Release Date</th>
+    </tr>
+    </thead>
+    <tbody>*@
+@*@for (var i = 0; i < Movies.Count; i++)
+    {
+        <tr style="background-color: @(i % 2 == 0 ? "pink" : "grey")">
+            <td>@(i + 1)</td>
+            <td>
+                <p><b>@Movies[i].Title</b></p>
+            </td>
+            <td>
+                <p><b>@Movies[i].ReleaseDate.ToString("dd MMM yyyy")</b></p>
+            </td>
+        </tr>
+    }*@
+@*@foreach (var movie in Movies)
+        {
+            <tr>
+                <td>@movie.Title</td>
+                <td>@movie.ReleaseDate</td>
+            </tr>
+        }
+        </tbody>
+    </table>*@
