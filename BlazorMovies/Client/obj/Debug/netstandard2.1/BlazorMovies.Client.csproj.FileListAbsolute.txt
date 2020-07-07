@@ -370,6 +370,8 @@ C:\Projects\BlazorMovies\BlazorMovies\Client\obj\Debug\netstandard2.1\RazorDecla
 C:\Projects\BlazorMovies\BlazorMovies\Client\obj\Debug\netstandard2.1\Razor\Shared\MoviesList.razor.g.cs
 C:\Projects\BlazorMovies\BlazorMovies\Client\obj\Debug\netstandard2.1\RazorDeclaration\Shared\IndividualMovie.razor.g.cs
 C:\Projects\BlazorMovies\BlazorMovies\Client\obj\Debug\netstandard2.1\Razor\Shared\IndividualMovie.razor.g.cs
-C:\Projects\BlazorMovies\BlazorMovies\Client\obj\Debug\netstandard2.1\integrity\0coVzd7_r1RcApDwQP1fV1o7nIeLIi_a8Fw5xH5ucko=.hash
-C:\Projects\BlazorMovies\BlazorMovies\Client\obj\Debug\netstandard2.1\integrity\cwqGcvoTtSIlPPjIsEcRd0oFxk-Ukt7Yg-Qxs7LQlNA=.hash
-C:\Projects\BlazorMovies\BlazorMovies\Client\obj\Debug\netstandard2.1\integrity\ALd6coAZOaLN_s5exYe1msReU19Cf21JTI0z8umuYEE=.hash
+C:\Projects\BlazorMovies\BlazorMovies\Client\obj\Debug\netstandard2.1\RazorDeclaration\Shared\GenericList.razor.g.cs
+C:\Projects\BlazorMovies\BlazorMovies\Client\obj\Debug\netstandard2.1\Razor\Shared\GenericList.razor.g.cs
+C:\Projects\BlazorMovies\BlazorMovies\Client\obj\Debug\netstandard2.1\integrity\zZxYbErcK33bc7Q2zFzjboHx_-e15QryG58tbM6xcDA=.hash
+C:\Projects\BlazorMovies\BlazorMovies\Client\obj\Debug\netstandard2.1\integrity\PdaOKUm-K7sMbWwAUnO6-hZ3jLGtRch89cMuoQtg5Bs=.hash
+C:\Projects\BlazorMovies\BlazorMovies\Client\obj\Debug\netstandard2.1\integrity\vN7_3Rjvot07V2_W30vxhY32RtjtW9c9kjaStLOLNRY=.hash

@@ -1,0 +1,52 @@
+﻿@typeparam TItem
+
+
+<div>
+    @if (List == null)
+    {
+        @*<text>Please wait while this page is loading... </text>*@
+        @if (NullTemplate != null)
+        {
+            @NullTemplate
+        }
+        else
+        {
+            //if ChildContent is null
+            <text>Loading...</text>
+        }
+    }
+    else if (List.Count == 0)
+    {
+        @if (EmptyTemplate != null)
+        {
+            @EmptyTemplate
+        }
+        else
+        {
+            //Default
+            <text>There are currently no movies to display.</text>
+        }
+    }
+    else
+    {
+
+        @foreach (var element in List)
+        {
+            @ElementTemplate(element)
+        }
+    }
+</div>
+
+@code {
+    [Parameter]
+    public RenderFragment NullTemplate { get; set; }
+
+    [Parameter]
+    public RenderFragment EmptyTemplate { get; set; }
+
+    [Parameter]
+    public List<TItem> List { get; set; }
+
+    [Parameter]
+    public RenderFragment<TItem> ElementTemplate { get; set; }
+}

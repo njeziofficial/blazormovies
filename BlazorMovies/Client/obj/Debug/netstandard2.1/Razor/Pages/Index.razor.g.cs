@@ -105,18 +105,22 @@ using BlazorMovies.Shared.Entities;
 #line hidden
 #nullable disable
             ));
-            __builder.AddAttribute(5, "NullTemplate", (Microsoft.AspNetCore.Components.RenderFragment)((__builder2) => {
-                __builder2.AddMarkupContent(6, "\r\n            ");
-                __builder2.AddMarkupContent(7, "<span style=\"color: red\">This page is definitely loading...</span>\r\n        ");
-            }
-            ));
-            __builder.AddAttribute(8, "EmptyTemplate", (Microsoft.AspNetCore.Components.RenderFragment)((__builder2) => {
-                __builder2.AddMarkupContent(9, "\r\n            ");
-                __builder2.AddMarkupContent(10, "<span style=\"color: blue\">No record to see</span>\r\n        ");
+            __builder.AddAttribute(5, "ChildContent", (Microsoft.AspNetCore.Components.RenderFragment)((__builder2) => {
+                __builder2.AddMarkupContent(6, "\r\n        ");
+                __builder2.OpenElement(7, "NullTemplate");
+                __builder2.AddMarkupContent(8, "\r\n            ");
+                __builder2.AddMarkupContent(9, "<span style=\"color: red\">This page is definitely loading...</span>\r\n        ");
+                __builder2.CloseElement();
+                __builder2.AddMarkupContent(10, "\r\n        ");
+                __builder2.OpenElement(11, "EmptyTemplate");
+                __builder2.AddMarkupContent(12, "\r\n            ");
+                __builder2.AddMarkupContent(13, "<span style=\"color: blue\">No record to see</span>\r\n        ");
+                __builder2.CloseElement();
+                __builder2.AddMarkupContent(14, "\r\n    ");
             }
             ));
             __builder.CloseComponent();
-            __builder.AddMarkupContent(11, "\r\n");
+            __builder.AddMarkupContent(15, "\r\n");
             __builder.CloseElement();
         }
         #pragma warning restore 1998
